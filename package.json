@@ -1,0 +1,13 @@
+{
+  "name": "opencode-speak-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A local, permission-gated macOS text-to-speech fallback for OpenCode",
+  "exports": {
+    ".": "./server/index.js"
+  },
+  "files": [
+    "server"
+  ]
+}
