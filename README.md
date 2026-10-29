@@ -1,12 +1,12 @@
 # OpenCode Speak Plugin
 
-A standalone local OpenCode V2 server plugin that provides `macos_say_text` as
+A standalone local OpenCode V2 server plugin that provides `say_text` as
 an opt-in fallback when the native `speak` tool is unavailable or failing.
 
 The tool accepts text only (1–240 characters), normalizes whitespace, and uses
 the fixed `/usr/bin/say` executable. It passes text through stdin, never invokes
 a shell, makes no network requests, and has a 30-second process limit. OpenCode
-asks for `macos_tts:local` permission for every call; no persistent approval is
+asks for `say_text:local` permission for every call; no persistent approval is
 requested or saved. Do not use it for routine updates or sensitive/private
 text.
 

@@ -77,7 +77,7 @@ export default {
   async setup(ctx) {
     const registration = await ctx.tool.transform((editor) => {
       editor.add({
-        name: "macos_say_text",
+        name: "say_text",
         description:
           "Speak up to 240 characters locally with macOS /usr/bin/say. Use only when the user explicitly requests speech and the native speak tool is unavailable or failing. This asks the user for permission every time. Never use for routine updates or sensitive/private text.",
         input: {
@@ -94,7 +94,7 @@ export default {
             sessionID: context.sessionID,
             agent: context.agent,
             source: { type: "tool", messageID: context.messageID, id: context.id },
-            action: "macos_tts",
+            action: "say_text",
             resources: ["local"],
             save: [],
             metadata: {
